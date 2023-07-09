@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Card</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div id="card-container">
+        {% for card in cards %}
+        <div class="card">
+            <h2>{{ card.title }}</h2>
+            <p>{{ card.description }}</p>
+            <button class="delete-card" data-card-id="{{ card.id }}">Delete</button>
+        </div>
+        {% endfor %}
+        <form id="new-card-form">
+            <input type="text" id="new-card-title" placeholder="Card title">
+            <textarea id="new-card-description" placeholder="Card description"></textarea>
+            <button type="submit">Add Card</button>
+        </form>
+    </div>
+    <script src="/static/js/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+/* Main CSS file for self-hosted Trello app */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+
+#user-profile {
+    float: right;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+#board-container, #list-container, #card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.board, .list, .card {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin: 10px;
+    padding: 20px;
+    width: calc(100% / 3 - 40px);
+}
+
+.board h3, .list h3, .card h3 {
+    margin: 0 0 10px 0;
+    padding: 0;
+}
+
+.board p, .list p, .card p {
+    margin: 0;
+    padding: 0;
+}
