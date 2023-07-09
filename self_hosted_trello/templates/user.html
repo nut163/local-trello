@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div id="user-profile">
+        <h2>Welcome, {{ User.username }}</h2>
+        <p>Email: {{ User.email }}</p>
+        <button onclick="logout()">Logout</button>
+    </div>
+
+    <script src="/static/js/scripts.js"></script>
+</body>
+</html>

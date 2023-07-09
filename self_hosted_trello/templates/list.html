@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div id="list-container">
+        {% for list in lists %}
+        <div class="list">
+            <h2>{{ list.title }}</h2>
+            <div id="card-container">
+                {% for card in list.cards %}
+                <div class="card">
+                    <p>{{ card.content }}</p>
+                </div>
+                {% endfor %}
+            </div>
+            <form action="/create_card" method="post">
+                <input type="hidden" name="list_id" value="{{ list.id }}">
+                <input type="text" name="content" placeholder="Enter card content">
+                <button type="submit">Add Card</button>
+            </form>
+        </div>
+        {% endfor %}
+        <form action="/create_list" method="post">
+            <input type="text" name="title" placeholder="Enter list title">
+            <button type="submit">Add List</button>
+        </form>
+    </div>
+    <script src="/static/js/scripts.js"></script>
+</body>
+</html>
